@@ -27,7 +27,7 @@ export default function Log() {
   const navigate = useNavigate();
   const {error,isLogin} = useSelector((store)=>store.authReducer)
   const dispatch = useDispatch()
-  console.log(error,isLogin)
+  
   const onsubmit = ()=>{
     const payload ={
       email,

@@ -8,25 +8,20 @@ import Welcome from '../components/Welcome'
 import { getNotes } from '../redux/notes/note.action'
 
 export default function Home() {
-  const {error,isLogin,token} = useSelector((store)=>store.authReducer)
-  const {notes, NoteError}= useSelector((store)=>store.noteReducer)
+  const {isLogin,token} = useSelector((store)=>store.authReducer)
+  const {notes}= useSelector((store)=>store.noteReducer)
   const dispatch = useDispatch()
   const toast = useToast()
   console.log(notes)
 
 useEffect(()=>{
   const headers = {
-    'Content-Type': 'application/json',
-    token:token // replace token with your actual token value
+    
+  'Content-Type': 'application/json',
+  token:token // replace token with your actual token value // replace token with your actual token value
   }
 
   dispatch(getNotes(headers))
-  
-
-  
-
-
-
 
 },[])
 

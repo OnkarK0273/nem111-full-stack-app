@@ -35,8 +35,9 @@ export default function Cards({data}) {
           }
 
           const headers = {
-            'Content-Type': 'application/json',
-            token:token // replace token with your actual token value
+            
+          'Content-Type': 'application/json',
+          token:token // replace token with your actual token value // replace token with your actual token value
           }
           dispatch(patchNotes(payload,id,headers)).then(()=>{
             dispatch(getNotes(headers))
