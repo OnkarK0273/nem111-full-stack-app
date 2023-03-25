@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken')
 
 const authMiddle = (req,res,next)=>{
-    const token = req.headers.token
+    const token=req.headers.token
     if(token){
         const decode =  jwt.verify(token, 'pass123')
         console.log(decode)
